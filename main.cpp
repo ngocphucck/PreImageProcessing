@@ -31,9 +31,11 @@ int main()
 	imwrite("D:/Pictures/pgm_processing/hist.pgm", hmat);
 	waitKey(0);
 	destroyWindow("Hist_image");
-
+        destroyWindow("Source image");
+ 
 	//Read the second source text file
 	Mat nmat2 = read("D:/Documents/image_text2.txt");
+	namedWindow("Source image", WINDOW_NORMAL);
 	imshow("Source image", nmat2);
 
 	//Apply the median filter to the source matrix and display, write the median image
